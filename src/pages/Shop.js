@@ -8,6 +8,7 @@ const Shop = () => {
         <div>
             <Header/>
             <Navigation/>
+            <p>asd</p>
         </div>
     );
 };

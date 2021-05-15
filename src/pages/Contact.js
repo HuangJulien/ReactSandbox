@@ -17,7 +17,7 @@ class Contact extends React.Component{
             <Navigation/>
             <ul>
                 {this.state.contributeurs.map((contributeur) => (    //Permet de mapper le tableau contributeurs
-                   <Personnes details={contributeur}/>           //Permet d'initialiser le props details qui contient contributeur
+                   <Personnes details={contributeur}/>               //Permet d'initialiser le props details qui contient contributeur
                 ))}
             </ul>
         </div>
