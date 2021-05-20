@@ -7,7 +7,7 @@ const Personnes = ({details}) => {
     
     return (
         <Accordion defaultActiveKey="0">
-        <Card>
+        <Card classname="card-contact">
           <Card.Header>
             <Accordion.Toggle as={Button} variant="link" eventKey="0">
                 {details.nom}
@@ -20,7 +20,6 @@ const Personnes = ({details}) => {
                         Adresse Mail : {details.mail}
                         <br></br>
                         Linkedin : <a href={details.lien} target="_blank" rel="noreferrer">{details.lien}</a>
-
                     </li>
                 </ul>
             </Card.Body>

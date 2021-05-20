@@ -1,0 +1,19 @@
+.panier{
+    margin-top: 1%;
+    border-radius: 25px;
+    border-style: solid;
+    border-color: rgb(0, 0, 0); 
+    padding: 5px;
+    padding-left: 10px;
+    height: 30%;
+
+    position: -webkit-sticky; /* Safari */
+    position: sticky;
+    top: 20%;
+}
+
+.button-panier{
+    margin-top: 5px;
+    margin-right: 10px;
+    float : right;
+}

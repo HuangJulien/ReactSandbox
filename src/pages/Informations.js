@@ -4,22 +4,21 @@ import Header from "../components/Header";
 
 class Informations extends Component {
 
-    state = {
-        produitsInfo: [],
-    };
-
     render() {
-
-        const produits = this.props.location.state;
-        this.state.produitsInfo.push(produits);
-        console.log(produits);
+        
+        const {state} = this.props.location;
+        //const produitsInfos = [...this.state.produitsInfo];
+        //produitsInfos.push(produits);
+        //this.setStat({produitsInfos : produits})
+        console.log(state)
+        
         
         return (
             <div>
                 <Header/>
                 <Navigation/>
                 <div>
-                    <button>X</button>
+                    {this.state}
                 </div>
             </div>
         );
