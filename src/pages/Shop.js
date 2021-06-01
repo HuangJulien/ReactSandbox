@@ -16,16 +16,18 @@ class Shop extends Component {
   
     handleGetInfo = (id) => {
       const produits = [...this.state.produits];                                       //On fait une copie du tableau
-      const informationsProduit = [...this.state.informationsProduit];                 //On fait une copie du tableau
+      //const informationsProduit = [...this.state.informationsProduit];               //On fait une copie du tableau
       const index = produits.findIndex((produit) => produit.id === id);                //On utilise findIndex qui va comparer l'id récupérer par l'id des produits 
-      informationsProduit.push(produits[index]);                                       //On push le produit avec l'index dans le tableau informationsProduit
-      this.setState({informationsProduit});                                            //On actualise informationsProduit
+     //informationsProduit.push(produits[index]);                                      //On push le produit avec l'index dans le tableau informationsProduit
+     const info = produits[index];
+     //console.log(info);
+     //this.setState({informationsProduit});                                          //On actualise informationsProduit
 
-      localStorage.setItem('produits', {informationsProduit});
+      localStorage.setItem('produits', JSON.stringify(info));
       
       this.props.history.push({
         pathname: "/Shop/Informations",
-        state: {informationsProduit} 
+        state: produits[index]
       })
   }
  
